@@ -31,6 +31,7 @@
             else:
                 return False
     def soforhivasok(self,nev):
+     
         osszeg=0
         for elem in self.adatsor:
             if elem['Nev']==nev:
