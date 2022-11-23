@@ -57,7 +57,7 @@ class ultrabalaton:
         db=0
         for i in range(len(self.adatok)):
             if self.adatok[i]['Kategoria']=='Ferfi' and self.adatok[i]['TavSzazalek']==100:
-                sum+=self.feladlsad(i)
+                sum+=self.IdőÓrában(i)
                 db+=1
         print(f'7. feladat: Átlagos idő: {sum/db} óra')
         
