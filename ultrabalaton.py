@@ -47,7 +47,7 @@ class ultrabalaton:
       
        else:print(f'\tTeljesítette a távot? Nem')
     
-    def feladlsad(self,i):
+    def IdőÓrában(self,i):
         ora=self.adatok[i]['VersenyO']
         perc=self.adatok[i]['VersenyP']
         mperc=self.adatok[i]['VersenyMP']
@@ -60,6 +60,8 @@ class ultrabalaton:
                 sum+=self.feladlsad(i)
                 db+=1
         print(f'7. feladat: Átlagos idő: {sum/db} óra')
+        
+        #8.feladat
     
    
 
