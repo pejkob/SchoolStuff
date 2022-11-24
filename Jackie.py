@@ -46,27 +46,27 @@ class Jackie:
 
     def feladat6(self):
         with open('jackie.html','w',encoding='utf-8') as w:
-            parts=["<!DOCTYPE html>",
-                    "<html lang='en'>",
-                    "<head>",
-                    "</head>",
-                    "<style>td {border:1px solid black;} </style>"
-                    "<body>",
-                    "<h1>Jackie Stewart</h1>",
-                    "<table>",
-                    "<tr><td>1973</td><td>18</td><td>6</td></tr>",
-                    "<tr><td>1972</td><td>11</td><td>4</td></tr>",
-                    "<tr><td>1971</td><td>26</td><td>8</td></tr>",
-                    "<tr><td>1970</td><td>20</td><td>3</td></tr>",
-                    "<tr><td>1969</td><td>19</td><td>9</td></tr>",
-                    "<tr><td>1968</td><td>12</td><td>4</td></tr>",
-                    "<tr><td>1967</td><td>27</td><td>3</td></tr>",
-                    "<tr><td>1966</td><td>26</td><td>6</td></tr>",
-                    "<tr><td>1965</td><td>18</td><td>2</td></tr>",
-                    "<tr><td>1964</td><td>14</td><td>8</td></tr>",
-                    "</table>"
-                    "</body>",
-                    "</html>",]
+            parts=["<!DOCTYPE html>\n",
+                    "<html lang='en'>\n",
+                    "<head>\n",
+                    "</head>\n",
+                    "<style>td {border:1px solid black;} </style>\n"
+                    "<body>\n",
+                    "<h1>Jackie Stewart</h1>\n",
+                    "<table>\n",
+                    "<tr><td>1973</td><td>18</td><td>6</td></tr>\n",
+                    "<tr><td>1972</td><td>11</td><td>4</td></tr>\n",
+                    "<tr><td>1971</td><td>26</td><td>8</td></tr>\n",
+                    "<tr><td>1970</td><td>20</td><td>3</td></tr>\n",
+                    "<tr><td>1969</td><td>19</td><td>9</td></tr>\n",
+                    "<tr><td>1968</td><td>12</td><td>4</td></tr>\n",
+                    "<tr><td>1967</td><td>27</td><td>3</td></tr>\n",
+                    "<tr><td>1966</td><td>26</td><td>6</td></tr>\n",
+                    "<tr><td>1965</td><td>18</td><td>2</td></tr>\n",
+                    "<tr><td>1964</td><td>14</td><td>8</td></tr>\n",
+                    "</table>\n"
+                    "</body>\n",
+                    "</html>\n",]
             w.writelines(parts)
             w.close()
         
