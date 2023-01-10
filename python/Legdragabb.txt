@@ -1,0 +1,1 @@
+{'ID': '4', 'Termek tipus': 'Nadrág', 'Gyarto': 'H&M', 'Tipus': 'farmer', 'Beszallito': 'QualityJeans Kft', 'Ar': '9000', 'Kiszereles': 'XL', 'Van-e': 'Nincs'}

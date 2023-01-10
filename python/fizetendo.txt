@@ -1,0 +1,1 @@
+[{'banán': 1470}, {'alma': 490}, {'körte': 392}, {'szilva': 490}, {'meggy': 686}, {'cseresznye': 1176}, {'narancs': 24010}, {'tök': 11270}]

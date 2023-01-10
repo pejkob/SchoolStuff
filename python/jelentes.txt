@@ -1,0 +1,1 @@
+('A legidősebb ember:', 'Tartüffe')('A legfiatalabb ember ennyi jövedelmet termelt', 7100000, 'Ft')('A maffiózó', 'London', '-ba fog utazni')

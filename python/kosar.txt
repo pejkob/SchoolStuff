@@ -1,0 +1,8 @@
+banán;1500
+alma;500
+körte;400
+szilva;500
+meggy;700
+cseresznye;1200
+narancs;24500
+tök;11500

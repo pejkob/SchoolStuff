@@ -1,0 +1,5 @@
+1;Póló;H&M;rövidújjú;AfricanKidsKft;5000;XL;Van
+2;Kabát;C&A;bundás;AfricanKids Kft;2400;XXL;Nincs
+3;Pulóver;Reserved;Kapucnis;PuloverTrans co;7500;L;Van
+4;Nadrág;H&M;farmer;QualityJeans Kft;9000;XL;Nincs
+5;Sál;Háda;Kötött;Grandmas Stuff Bt;3000;L;Van
