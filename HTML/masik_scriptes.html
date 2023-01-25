@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function divstyle(){
+            document.getElementById('ido').style.color='green';
+            document.getElementById('ido').style.backgroundColor='yellow';
+            document.getElementById('ido').style.fontSize='20px';
+
+
+        }
+        function writeh1(){
+            document.getElementById('cim').innerHTML='A h1-es címet egy script írja ide amikor betöltődik a body'
+        }
+
+        function changelight(){
+
+
+            state=document.getElementById('elso').src
+            if (state=="https://www.w3schools.com/html/pic_bulboff.gif") {
+                document.getElementById('elso').src="https://www.w3schools.com/html/pic_bulbon.gif"
+            }
+            else if (state=="https://www.w3schools.com/html/pic_bulbon.gif"){
+                document.getElementById('elso').src="https://www.w3schools.com/html/pic_bulboff.gif"
+            }
+            
+        }
+
+    </script>
+
+    <style>
+        div{
+            border: 1px solid black ;
+            min-height: 50px;
+            margin-top: 30px;
+        }
+        
+        button{
+            border-radius: 5px;
+            background-color: lightyellow;
+            margin-top: 10px;
+        }
+    </style>
+    
+</head>
+<body onload="writeh1()">
+    
+    <h1  id='cim' ></h1>
+    <button onclick="document.getElementById('ido').innerHTML=Date()">
+        Dátum és idő megjelenítése
+    </button>
+    <br>
+    <button onclick="divstyle()">
+        Zöld, sárga háttér, a betű 20 képpontos
+    </button>
+
+    <div id="ido">
+
+    </div>
+        <button onclick="changelight()"><img id='elso' src="https://www.w3schools.com/html/pic_bulboff.gif" alt=""></button>
+        <button  onclick="document.getElementById('masodik').src = 'https://www.w3schools.com/html/pic_bulbon.gif';"><img id="masodik" src="https://www.w3schools.com/html/pic_bulboff.gif" alt=""></button>
+        <button  onclick="document.getElementById('harmadik').src = 'https://www.w3schools.com/html/pic_bulboff.gif';"><img id="harmadik" src="https://www.w3schools.com/html/pic_bulbon.gif" alt=""></button>
+    </div>
+
+</body>
+</html>

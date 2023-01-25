@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style> 
+    body{ background-color:lightgrey;
+    }
+    </style>
+</head>
+<body>
+    <h1>
+        Egyszerű scriptes példa
+    </h1>
+
+    <button onclick="document.getElementById('sor').innerHTML ='Hello!';">
+        Az alsó bekezdésbe írja be hogy Hello!
+    </button>
+    <br>
+    <button onclick="document.getElementById('sor').style.fontSize = '25px';">
+        font mérete legyen 25pixel
+    </button>
+    <br>
+    <button onclick="document.getElementById('sor').style.color = 'red';">
+        legyen piros
+    </button>
+    <br>
+    <button onclick="document.getElementById('sor').style.backgroundColor = 'yellow';">
+        legyen sárga háttér
+    </button>
+    <br>
+    <button onclick="document.getElementById('kep').src = 'https://www.w3schools.com/html/pic_bulbon.gif';">
+        a "https://www.w3schools.com/html/pic_bulbon.gif" képet töltse be az alil lévő img tag-be
+    </button>
+    <p id='sor'></p>
+    <img id="kep" src="https://www.w3schools.com/html/pic_bulboff.gif" alt="">
+</body>
+</html>

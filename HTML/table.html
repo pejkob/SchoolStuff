@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Favicon</title>
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg" type="image/x-icon">
+    
+    <script>
+        function Date(){
+            
+        }
+    </script>
+   
+    <style>
+        #elso{
+           background-color: cornflowerblue;
+        }
+        tr:nth-child(odd){
+            background-color: azure;
+        }
+
+        table,th,td{
+            border-collapse: collapse;
+            border: 1px solid black;
+            width: 500px;
+        }
+       
+        tr:nth-child(even)
+        {
+            background-color: lightgrey;
+        }
+
+       button{
+           width: 100px;
+           height: 30px;
+           background-color: wheat;
+           margin: 10px;
+           border:1px solid black;
+           border-radius: 5px;
+            }
+      
+    </style>
+</head>
+<body>
+    <h1>HTML Táblázatok</h1>
+
+    <h2>Ebben a példában a táblázatok színezését kérem számon.</h2>
+
+    <ul>
+        <li> van a táblázatnak egy alapszíne="azure"</li>
+        <li> az első sor "cornflowerblue" színű</li>
+        <li> tr:nth-child selektorral lehet páros és páratlan sorokat máshogy színezni!</li>
+    </ul>
+    <table>
+        <tr id="elso">
+            <td>
+                2021.01.01
+            </td>
+            <td>
+                2021.02.01
+            </td>
+            <td>
+                2021.03.01
+            </td>
+        </tr>
+        <tr>
+            <td>
+                2021.01.02
+            </td>
+            <td>
+                2021.02.02
+            </td>
+            <td>
+                2021.03.02
+            </td>
+        </tr>
+        <tr>
+            <td>
+                2021.01.03
+            </td>
+            <td>
+                2021.02.03
+            </td>
+            <td>
+                2021.03.03
+            </td>
+        </tr>
+        <tr>
+            <td>
+                2021.01.04
+            </td>
+            <td>
+                2021.02.04
+            </td>
+            <td>
+                2021.03.04
+            </td>
+        </tr>
+        <tr>
+            <td>
+                2021.01.05
+            </td>
+            <td>
+                2021.02.05
+            </td>
+            <td>
+                2021.03.05
+            </td>
+        </tr>
+        <tr>
+            <td>
+                2021.01.06
+            </td>
+            <td>
+                2021.02.06
+            </td>
+            <td>
+                2021.02.06
+            </td>
+        </tr>
+        <tr>
+            <td>
+              2021.01.07
+            </td>
+            <td>
+                2021.02.07
+            </td>
+            <td>
+                2021.03.07
+            </td>
+        </tr>
+        <tr>
+            <td>
+                2021.01.08
+            </td>
+            <td>
+                2021.02.08
+            </td>
+            <td>
+                2021.03.08
+            </td>
+        </tr>
+          
+    </table>
+
+    <button onclick="Document.getElementById('ido').innerHTML=Date()">asd</button>
+    <p id='ido'></p>
+    <h1>HTML Table Cellaösszevonások</h1>
+    <pre>
+        Cellaösszevonásokat a rowspan és colspan attribútumokkal lehet elérni.
+        <a href="https://www.w3schools.com/html/html_tables.asp">https://www.w3schools.com/html/html_tables.asp</a> Egy ehhez hasonló táblázatot mindig úgy
+        kezdünk, hogy elkészítjük a cellaösszevonások nélküli táblázatot!
+        Jelen esetben egy 7*3-as táblázatot!
+        Az összevonásokat ezután építjük a weboldalba!
+    </pre>
+    <table>
+        <tr>
+            <th colspan="3">Cím</th>
+        </tr>
+        <tr>
+           <td>1</td>
+           <td>2</td>
+            <td rowspan="2">3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td rowspan="3">5</td>
+
+           
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td rowspan="2" colspan="2">13</td>
+            <td>15</td>
+            
+        </tr>
+        <tr>
+            <td>18</td>
+        </tr>
+    </table>
+
+    <h1>Lista</h1>
+
+    <ul>
+        <li>&ltul&gt: Defines an unordered list </li>
+        <li>&ltol&gt: Defines an ordered list</li>
+        <li>&ltli&gt: Defines a list item</li>
+        <li>&ltdl&gt: Defines a description list</li>
+        <li>&ltdt&gt: Defines a term in a description list</li>
+        <li>&ltdd&gt: Describes the term in a description list</li>
+    </ul>
+
+    <ol type="I">
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+        <li>Fourth item</li>
+    </ol>
+
+    <h1>WebMailek listája</h1>
+    <dl>
+        <button><a href="">gmail.com</a></button> <br>
+        <button><a href="">freemail.hu</a></button> <br>
+        <button><a href="">gmail.hu</a></button> <br>
+        <button><a href="">citromail.hu</a></button> <br>
+    </dl>
+</body>
+</html>
