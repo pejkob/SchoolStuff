@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Oswald&family=Raleway:wght@500&family=Titillium+Web:ital,wght@1,200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+</head>
+
+<style>
+    #alert{
+        inset: 0;
+        margin-top: auto;
+    }
+    .input-group-text{
+        margin:0px 5px 0px 5px;
+        width: 40%;
+    }
+    .form-control{
+        width: 100%;
+    }
+    #profilkep {
+        width: 50px;
+    }
+    
+    #logout {
+        border: 2px solid grey;
+        background-color: lightgrey;
+    }
+    .cImage{
+      width: 40%;
+        height: 350px;
+    }
+   
+   
+</style>
+
+<body>
+   
+    <div class="container">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
+           
+            <div class=" container-fluid">
+                <a class="navbar-brand " href="https://dummyjson.com">
+                    dummy<b>JSON</b> 
+                </a>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Cart</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Product</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Users
+                    </a>
+                            <ul class="dropdown-menu" id="lista">
+                                <li>
+                                    <a id="listElement1" class="dropdown-item" onclick="listAll(`https:&#47&#47dummyjson.com/products`)">Get all products</a></li>
+                                <li><a id="listElement2" class="dropdown-item " onclick="listOne(`https:&#47&#47dummyjson.com/products/1`)">Get a single product</a></li>
+                                <li>
+                                    <hr class="dropdown-divider ">
+                                </li>
+                                <li><a class="dropdown-item" href="# ">Something else here</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <div id="spinner" class="spinner-border spinner-border-sm text-primary" role="status">
+                </div>  
+
+            </div>
+            <div class="form d-flex">
+                <input type="text" id="searchbar" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
+                <button onclick="listSearch('https:&#47&#47dummyjson.com/products/search?q=')" class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="bi bi-search"></i></button>
+              </div>
+              
+            <div class="form d-flex" id="login">
+                <input type="text " name=" " class="input-group-text" placeholder="email " id="email ">
+                <input type="password " class="input-group-text " name=" " placeholder="password " id="password ">
+                <button onclick="login() " class="btn btn-outline-warning">Login</button>
+            </div>
+
+
+
+            <div class="form d-flex" id="logout">
+                <img id="profilkep" src=" " alt=" ">
+                <button class="btn" id="profile">
+                    
+                </button>
+                <button onclick="logout()" class="btn btn-danger">Log out</button>
+            </div>
+        </nav>
+        <div id="cContain" class="cardcontainer row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+        </div>
+        <div id="alerts" class="alert alert-danger" role="alert">Nincs a keresésnek megfelelő elem!</div>
+          
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js "></script>
+    <script src="index.js">
+    </script>
+</body>
+
+</html>
