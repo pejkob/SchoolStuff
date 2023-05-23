@@ -487,7 +487,7 @@ async function getPosts() {
     var posts = "";
     
     try {
-      const response = await fetch('https://dummyjson.com/posts/');
+      const response = await fetch('https://dummyjson.com/posts?limit=5');
       const data = await response.json();
       
       console.log(data);
