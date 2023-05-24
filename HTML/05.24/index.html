@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        var elso = 0;
+        var masodik = 0;
+        var harmadik = 0;
+        var negyedik = 0;
+        var otodik = 0;
+        tombFeltoltes();
+
+        async function tombFeltoltes() {
+            try {
+                const response1 = await fetch('https://dummyjson.com/products/categories');
+                const adat1 = await response1.json();
+                elso = JSON.stringify(adat1).length;
+
+                const response2 = await fetch('https://dummyjson.com/carts');
+                const adat2 = await response2.json();
+                masodik = JSON.stringify(adat2).length;
+
+
+                const response3 = await fetch('https://dummyjson.com/users/5/posts');
+                const adat3 = await response3.json();
+                harmadik = JSON.stringify(adat3).length;
+
+
+                const response4 = await fetch('https://dummyjson.com/comments');
+                const adat4 = await response4.json();
+                negyedik = JSON.stringify(adat4).length;
+
+                const response5 = await fetch('https://dummyjson.com/todos?limit=10');
+                const adat5 = await response5.json();
+                otodik = JSON.stringify(adat5).length;
+                var chrt = document.getElementById("myChart").getContext("2d");
+                var chartId = new Chart(chrt, {
+                    type: 'polarArea',
+                    data: {
+                        labels: ["Kategóriák", "Kosár", "Postok", "Kommentek", "Tennivalók"],
+                        datasets: [{
+                            label: "Tömb elemei",
+                            data: [elso, masodik, harmadik, negyedik, otodik],
+                            backgroundColor: ['yellow', 'aqua', 'pink', 'lightgreen', 'gold', 'lightblue'],
+                        }],
+                    },
+                    options: {
+                        responsive: true,
+                    },
+                });
+
+            } catch (error) {
+                console.error(error);
+            }
+        }
+    </script>
+</body>
+
+</html>

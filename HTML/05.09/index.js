@@ -300,24 +300,24 @@ function loadData() {
 
 
 let cart = [];
-let numberid=1;
+let numberid = 1;
+
 function addToCart(index) {
 
     fetch(`https://dummyjson.com/products/${index}`).then(response => response.json()).then(function(data) {
 
-        let item = {"Nid":numberid, "title": data.title, "stock": data.stock, "price": data.price, "link": data.images[0], "description": data.description, "kep": data.image };
+        let item = { "Nid": numberid, "title": data.title, "stock": data.stock, "price": data.price, "link": data.images[0], "description": data.description, "kep": data.image };
         cart.push(item);
-        sessionStorage.setItem("items",item);
+        sessionStorage.setItem("items", item);
         ProductCount();
         numberid++;
     })
     console.log(cart);
 }
 
-function ProductCount()
-{
-          const badgeIcon = document.getElementById("badgeIcon");
-          badgeIcon.setAttribute("value", cart.length);
+function ProductCount() {
+    const badgeIcon = document.getElementById("badgeIcon");
+    badgeIcon.setAttribute("value", cart.length);
 }
 
 
@@ -389,7 +389,7 @@ function displayCart() {
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between align-items-center mb-4">
                                                 <h5 class="mb-0">Card details</h5>
-                                                <img src="${profKep}" class="img-fluid rounded-3" style="width: 45px; background-color:grey; border:1px solid black" alt="Avatar">
+                                                <img src="${profKep}" class="img-fluid rounded-3" style="width: 70px; height:70px; background-color:grey; border:1px solid black" alt="Avatar">
                                             </div>
 
                                             <p class="small mb-2">Card type</p>
@@ -466,40 +466,40 @@ function displayCart() {
 
     document.getElementById("cContain").innerHTML = oldal;
 }
+
 function removeItemFromCart(x) {
-  let removableItemIndex = cart.findIndex(item => item.Nid == x);
-  console.log(x);
-  console.log(removableItemIndex);
+    let removableItemIndex = cart.findIndex(item => item.Nid == x);
+
     if (removableItemIndex !== -1) {
-    const removedItem = cart.splice(removableItemIndex, 1)[0];
-    ProductCount();
-    displayCart();
-    console.log('Item removed from cart:', removedItem);
-  } else {
-    console.log('Item not found in cart!');
-  }
+        const removedItem = cart.splice(removableItemIndex, 1)[0];
+        ProductCount();
+        displayCart();
+        console.log('Item removed from cart:', removedItem);
+    } else {
+        console.log('Item not found in cart!');
+    }
 }
-var id="";
-var buttonid="";
-var usersAndPics=[];
+var id = "";
+var buttonid = "";
+var usersAndPics = [];
+var postok = [];
+var userek = [];
+
 async function getPosts() {
     document.getElementById("cContain").innerHTML = "";
     var posts = "";
-    
+    document.getElementById("spinner").style.display = "block";
+
+
     try {
-      const response = await fetch('https://dummyjson.com/posts?limit=5');
-      const data = await response.json();
-      
-      console.log(data);
-      
-      for (const element of data.posts) {
-        const postResponse = await fetch('https://dummyjson.com/users/' + element.userId);
-        const post = await postResponse.json();
-        usersAndPics.push({"id":post.id,"pic":post.image});
-        console.log(post)
-        id=post.id;
-        buttonid="button"+post.id;
-        posts = `<div class="card comment">
+        const response = await fetch('https://dummyjson.com/posts?limit=5');
+        const data = await response.json();
+        postok.push(data);
+        for (const element of data.posts) {
+            const postResponse = await fetch('https://dummyjson.com/users/' + element.userId);
+            const post = await postResponse.json();
+            userek.push(post)
+            posts = `<div class="card comment">
         <div class="card-body">
           <h1 class="commentTitle">${element.title}</h1>
           <h3>${post.firstName} ${post.lastName}</h3>
@@ -510,8 +510,8 @@ async function getPosts() {
           <div class="accordion" id="accordion-${post.id}">
             <div class="accordion-item">
               <h2 class="accordion-header" id="heading-${post.id}">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-${post.id}" aria-expanded="true" aria-controls="collapse-${post.id}" onclick="fetchComments(${post.id})">
-                  <i class="smallicons bi bi-hand-thumbs-up">Like</i> <i class="smallicons bi bi-chat">Comment</i>
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-${post.id}" aria-expanded="true" aria-controls="collapse-${post.id}" onclick="fetchComments(${element.id},${post.id})">
+                  <i class="smallicons bi bi-hand-thumbs-up">Like</i> <i class="smallicons bi bi-chat" onclick="addNewComment(${element.id})">Comment</i>
                 </button>
               </h2>
               <div class="accordion-collapse collapse" id="collapse-${post.id}" aria-labelledby="heading-${post.id}" data-bs-parent="#accordion-${post.id}">
@@ -523,43 +523,56 @@ async function getPosts() {
       </div>
       
     `;
-  
-        document.getElementById("cContain").innerHTML += posts;
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  }
-  
+            document.getElementById("cContain").innerHTML += posts;
+            document.getElementById("spinner").style.display = "none";
 
-  function fetchComments(postId) {
-    fetch(`https://dummyjson.com/comments/post/${postId}`)
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        const accordionBody = document.querySelector(`#collapse-${postId} .accordion-body`);
-        accordionBody.innerHTML = "";
-      
-        for(let i=0;i<data.comments.length;i++)
-        {
-          const newCard = document.createElement("div");
-          newCard.classList.add("card");
-          newCard.innerHTML+=` <div class="card-body">`;
-          if(data.comments[i].user.id==usersAndPics[id])
-          {
-            newCard.innerHTML+=`<img src="${usersAndPics[id][pic]}">`;
-          }
-          newCard.innerHTML += `
-                <h5>${data.comments[i].user.username}</h5>
-              <h4>${data.comments[i].body}</h4>
-            </div>
-          `;
-          accordionBody.appendChild(newCard);
-         
-        };
-      })
-      .catch((error) => {
+        }
+    } catch (error) {
         console.log(error);
-      });
-  }
-  
+    }
+}
+async function getSpecificUser(specificUser) {
+    const postResponse = await fetch('https://dummyjson.com/users/' + specificUser);
+    const userData = await postResponse.json();
+    return userData.image;
+}
+
+function fetchComments(postId, collapseId) {
+    console.log(postId);
+    document.getElementById("spinner").style.display = "block";
+    let comments = [];
+    fetch(`https://dummyjson.com/posts/${postId}/comments`)
+        .then((response) => response.json())
+        .then(async(data) => {
+            comments.push(data);
+            const accordionBody = document.querySelector(`#collapse-${collapseId} .accordion-body`);
+            accordionBody.innerHTML = "";
+
+            for (let i = 0; i < comments[0].comments.length; i++) {
+                const newCard = document.createElement("div");
+                newCard.id = "comment" + postId;
+                newCard.className = "card card-body";
+
+                try {
+                    const imgUrl = await getSpecificUser(comments[0].comments[i].user.id);
+                    const img = document.createElement("img");
+                    img.className = "commentprofilepicture";
+                    img.src = imgUrl;
+                    newCard.appendChild(img);
+                } catch (error) {
+                    console.log(error);
+                }
+
+                newCard.innerHTML += `
+            <h4>${comments[0].comments[i].user.username}</h4>
+            <p>${comments[0].comments[i].body}</p>
+          `;
+                accordionBody.appendChild(newCard);
+                document.getElementById("spinner").style.display = "none";
+
+            }
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+}
