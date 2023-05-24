@@ -309,16 +309,15 @@ function addToCart(index) {
         let item = { "Nid": numberid, "title": data.title, "stock": data.stock, "price": data.price, "link": data.images[0], "description": data.description, "kep": data.image };
         cart.push(item);
         sessionStorage.setItem("items", item);
-        ProductCount();
+        const badgeIcon = document.getElementById("badgeIcon");
+        badgeIcon.setAttribute("value", cart.length);
         numberid++;
     })
     console.log(cart);
 }
 
-function ProductCount() {
-    const badgeIcon = document.getElementById("badgeIcon");
-    badgeIcon.setAttribute("value", cart.length);
-}
+  
+
 
 
 function displayCart() {
@@ -472,7 +471,7 @@ function removeItemFromCart(x) {
 
     if (removableItemIndex !== -1) {
         const removedItem = cart.splice(removableItemIndex, 1)[0];
-        ProductCount();
+        badgeIcon.setAttribute("value", cart.length);
         displayCart();
         console.log('Item removed from cart:', removedItem);
     } else {
@@ -511,7 +510,7 @@ async function getPosts() {
             <div class="accordion-item">
               <h2 class="accordion-header" id="heading-${post.id}">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-${post.id}" aria-expanded="true" aria-controls="collapse-${post.id}" onclick="fetchComments(${element.id},${post.id})">
-                  <i class="smallicons bi bi-hand-thumbs-up">Like</i> <i class="smallicons bi bi-chat" onclick="addNewComment(${element.id})">Comment</i>
+                  <i class="smallicons bi bi-hand-thumbs-up badge" onclick="addLike(${element.id})">Like</i> <i class="smallicons bi bi-chat" onclick="addNewComment(${element.id})">Comment</i>
                 </button>
               </h2>
               <div class="accordion-collapse collapse" id="collapse-${post.id}" aria-labelledby="heading-${post.id}" data-bs-parent="#accordion-${post.id}">
@@ -563,7 +562,7 @@ function fetchComments(postId, collapseId) {
                     console.log(error);
                 }
 
-                newCard.innerHTML += `
+                 newCard.innerHTML += `
             <h4>${comments[0].comments[i].user.username}</h4>
             <p>${comments[0].comments[i].body}</p>
           `;

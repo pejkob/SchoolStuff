@@ -3,6 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="theme-color" content="#2A2F4F"/>
+    <meta name="description" content="Author: Pejkó Bálit,
+    DummyJson test page Category: Fake REST API>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DummyJson test page</title>
@@ -71,20 +74,26 @@
     }
     
     body {
-        background-color: lightgrey;
+        background-color: #2A2F4F;
     }
     
     .cImage {
         width: 40%;
         height: 350px;
+        border-radius: 3rem;
+        margin: auto;
     }
     
     #stockid {
         color: lightgreen;
     }
+    .accordion-item{
+        background-color: #E5BEEC;
+    }
     
     .card {
-        background-color: grey;
+        background-color:#917FB3 ;
+        
     }
     
     .navbar {
@@ -96,6 +105,7 @@
         inset: 0;
         margin: auto;
         margin-top: 2rem;
+        background-color: #917FB3;
     }
     
     .commentTitle {
@@ -114,6 +124,8 @@
     
     .commentprofilepicture {
         display: flex;
+        border-radius: 10px;
+        background-color: white;
         width: 60px;
         float: left;
     }
@@ -135,11 +147,11 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Product</a>
+                            <a class="nav-link" href="#">Profile</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Users
+                      Product
                     </a>
                             <ul class="dropdown-menu" id="lista">
                                 <li>
@@ -152,7 +164,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" onclick="getPosts()">Posts</a>
+                            <a class="nav-link" href="#" onclick="getPosts()">Posts</a>
                         </li>
 
                     </ul>
