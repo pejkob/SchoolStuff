@@ -23,6 +23,8 @@
         this.d3 = DobasErtek(sorSplit[5]);
     }
 
+  
+
     public static double DobasErtek(string dobas)
     {
         switch (dobas)
