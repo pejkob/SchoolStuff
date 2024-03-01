@@ -9,7 +9,6 @@
 
     public Versenyzo(string sor)
     {
-        
         string[] sorSplit = sor.Split(';');
         if (sorSplit.Length != 6)
         {
@@ -23,23 +22,20 @@
         this.d3 = DobasErtek(sorSplit[5]);
     }
 
-    public static double Eredmeny(Versenyzo versenyzo)
+    public double Eredmeny()
     {
-        if (versenyzo.d1>versenyzo.d2&&versenyzo.d1>versenyzo.d3)
-        {
-            return versenyzo.d1;
-        }
-        if (versenyzo.d1 > versenyzo.d2 && versenyzo.d1 > versenyzo.d3)
-        {
-            return versenyzo.d1;
-        }
-        if (versenyzo.d3 > versenyzo.d2 && versenyzo.d3 > versenyzo.d1)
-        {
-            return versenyzo.d1;
-        }
-        return -1;
+        return Math.Max(Math.Max(d1, d2), d3);
     }
-  
+
+    public static string Nemzet(Versenyzo versenyzo)
+    {
+        return versenyzo.nemzetEsKod.Split('(')[0].Trim();
+    }
+
+    public static string Kod(Versenyzo versenyzo)
+    {
+        return versenyzo.nemzetEsKod.Split('(', ')')[1].Trim();
+    }
 
     public static double DobasErtek(string dobas)
     {
