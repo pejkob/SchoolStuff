@@ -1,0 +1,16 @@
+/Users/pejkobalint/Documents/GitHub/SchoolStuff/C#/Feladatok/Hiányzások/Hianyzasok/Hianyzasok/obj/Debug/net7.0/Hianyzasok.csproj.AssemblyReference.cache
+/Users/pejkobalint/Documents/GitHub/SchoolStuff/C#/Feladatok/Hiányzások/Hianyzasok/Hianyzasok/obj/Debug/net7.0/Hianyzasok.GeneratedMSBuildEditorConfig.editorconfig
+/Users/pejkobalint/Documents/GitHub/SchoolStuff/C#/Feladatok/Hiányzások/Hianyzasok/Hianyzasok/obj/Debug/net7.0/Hianyzasok.AssemblyInfoInputs.cache
+/Users/pejkobalint/Documents/GitHub/SchoolStuff/C#/Feladatok/Hiányzások/Hianyzasok/Hianyzasok/obj/Debug/net7.0/Hianyzasok.AssemblyInfo.cs
+/Users/pejkobalint/Documents/GitHub/SchoolStuff/C#/Feladatok/Hiányzások/Hianyzasok/Hianyzasok/obj/Debug/net7.0/Hianyzasok.csproj.CoreCompileInputs.cache
+/Users/pejkobalint/Documents/GitHub/SchoolStuff/C#/Feladatok/Hiányzások/Hianyzasok/Hianyzasok/bin/Debug/net7.0/Hianyzasok
+/Users/pejkobalint/Documents/GitHub/SchoolStuff/C#/Feladatok/Hiányzások/Hianyzasok/Hianyzasok/bin/Debug/net7.0/szeptember.csv
+/Users/pejkobalint/Documents/GitHub/SchoolStuff/C#/Feladatok/Hiányzások/Hianyzasok/Hianyzasok/bin/Debug/net7.0/Hianyzasok.deps.json
+/Users/pejkobalint/Documents/GitHub/SchoolStuff/C#/Feladatok/Hiányzások/Hianyzasok/Hianyzasok/bin/Debug/net7.0/Hianyzasok.runtimeconfig.json
+/Users/pejkobalint/Documents/GitHub/SchoolStuff/C#/Feladatok/Hiányzások/Hianyzasok/Hianyzasok/bin/Debug/net7.0/Hianyzasok.dll
+/Users/pejkobalint/Documents/GitHub/SchoolStuff/C#/Feladatok/Hiányzások/Hianyzasok/Hianyzasok/bin/Debug/net7.0/Hianyzasok.pdb
+/Users/pejkobalint/Documents/GitHub/SchoolStuff/C#/Feladatok/Hiányzások/Hianyzasok/Hianyzasok/obj/Debug/net7.0/Hianyzasok.dll
+/Users/pejkobalint/Documents/GitHub/SchoolStuff/C#/Feladatok/Hiányzások/Hianyzasok/Hianyzasok/obj/Debug/net7.0/refint/Hianyzasok.dll
+/Users/pejkobalint/Documents/GitHub/SchoolStuff/C#/Feladatok/Hiányzások/Hianyzasok/Hianyzasok/obj/Debug/net7.0/Hianyzasok.pdb
+/Users/pejkobalint/Documents/GitHub/SchoolStuff/C#/Feladatok/Hiányzások/Hianyzasok/Hianyzasok/obj/Debug/net7.0/Hianyzasok.genruntimeconfig.cache
+/Users/pejkobalint/Documents/GitHub/SchoolStuff/C#/Feladatok/Hiányzások/Hianyzasok/Hianyzasok/obj/Debug/net7.0/ref/Hianyzasok.dll
