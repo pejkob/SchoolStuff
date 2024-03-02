@@ -1,4 +1,4 @@
-class Naplo:
+ class Naplo:
     adatsor=[]
 
     def __init__(self,allomany) -> None:
@@ -31,6 +31,7 @@ class Naplo:
             else:
                 return False
     def soforhivasok(self,nev):
+     
         osszeg=0
         for elem in self.adatsor:
             if elem['Nev']==nev:
@@ -60,7 +61,42 @@ class Naplo:
                )
             f.writelines(kilista)
             f.close()
+    def becenevek(self):
+        bNevek=[]
+        for i in range(len(self.adatsor)):
+            if bNevek.__contains__(self.adatsor[i]['Nev']):
+                i+=1
+            else:
+                bNevek.append(self.adatsor[i]['Nev'])
+            
+    
 
+        return len(bNevek)
+
+    def maxhivas(self):
+        bNevek=[]
+        for a in range(len(self.adatsor)):
+            if bNevek.__contains__(self.adatsor[a]['Nev']):
+                a+=1
+            else:
+                bNevek.append(self.adatsor[a]['Nev'])
+        hivasok=[]
+        for i in range(len(bNevek)):
+            osszeshivas=0
+            for j in range(len(self.adatsor)):
+                if bNevek[i]==self.adatsor[j]['Nev']:
+                    osszeshivas+=self.adatsor[j]['AdasDb']
+            hivasok.append(osszeshivas)
+        nev=''
+        for d in range(len(hivasok)):
+            if hivasok[d]==max(hivasok):
+                nev=bNevek[d]
+
+        
+        print(f'9. feladat: Legtöbb adást indító sofőr\n\tNév: {nev}\n\tAdások száma: {max(hivasok)} alkalom')
+
+            
+            
 
 
 
@@ -81,8 +117,10 @@ else:
 
 print('Összperc: ',str(ujjnaplo.atvalto(ujjnaplo.adatsor[0]['Óra'],ujjnaplo.adatsor[0]['Perc'])))
 
+print(f'8. feladat: Sofőrök száma: {ujjnaplo.becenevek()}')
 
 
+ujjnaplo.maxhivas()
 allomanyNev="cb2.txt"
 ujjnaplo.ujAllomany(allomanyNev)
 
