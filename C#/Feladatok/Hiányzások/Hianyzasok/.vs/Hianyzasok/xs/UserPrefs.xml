@@ -1,4 +1,27 @@
 ﻿<Properties StartupConfiguration="{EB835D6C-79E4-4840-AA4B-7797CF0A1BB1}|Default">
-  <MonoDevelop.Ide.ItemProperties.Hianyzasok FirstBuild="True" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Hianyzasok/Program.cs">
+    <Files>
+      <File FileName="Hianyzasok/Program.cs" Line="87" Column="1" />
+      <File FileName="Hianyzasok/Hianyzasok.cs" Line="9" Column="9" />
+      <File FileName="Hianyzasok/szeptember.csv" Line="49" Column="20" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Hianyzasok" expanded="True">
+            <Node name="Hianyzasok" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Hianyzasok PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
 </Properties>
