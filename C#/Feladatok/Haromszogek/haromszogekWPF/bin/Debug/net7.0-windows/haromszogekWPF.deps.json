@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "haromszogekWPF/1.0.0": {
+        "dependencies": {
+          "haromszogekCLI": "1.0.0"
+        },
+        "runtime": {
+          "haromszogekWPF.dll": {}
+        }
+      },
+      "haromszogekCLI/1.0.0": {
+        "runtime": {
+          "haromszogekCLI.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "haromszogekWPF/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "haromszogekCLI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

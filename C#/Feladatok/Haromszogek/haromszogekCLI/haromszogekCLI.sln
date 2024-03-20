@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "haromszogekCLI", "haromszogekCLI.csproj", "{C1B52C58-E067-4F34-B8F4-7D7A4854102A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "haromszogekWPF", "..\haromszogekWPF\haromszogekWPF.csproj", "{60EA27CD-7B4E-48DD-AFF2-857D58F71E81}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1B52C58-E067-4F34-B8F4-7D7A4854102A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1B52C58-E067-4F34-B8F4-7D7A4854102A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1B52C58-E067-4F34-B8F4-7D7A4854102A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1B52C58-E067-4F34-B8F4-7D7A4854102A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60EA27CD-7B4E-48DD-AFF2-857D58F71E81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60EA27CD-7B4E-48DD-AFF2-857D58F71E81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60EA27CD-7B4E-48DD-AFF2-857D58F71E81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60EA27CD-7B4E-48DD-AFF2-857D58F71E81}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {11A587EF-262B-4DE7-BE1F-77FEB75AB119}
+	EndGlobalSection
+EndGlobal
