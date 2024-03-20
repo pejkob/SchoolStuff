@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("haromszogekWPF")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1fd9de24c5d843046545dd2280b656d20cf406e1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a76657fecccc531241ea102e551c4646bce28af")]
 [assembly: System.Reflection.AssemblyProductAttribute("haromszogekWPF")]
 [assembly: System.Reflection.AssemblyTitleAttribute("haromszogekWPF")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pbálint\\Documents\\GitHub\\SchoolStuff\\C#\\BackEnd\\Haromszogek\\haromszogekCLI\\haromszogekCLI.csproj",
+      "projectUniqueName": "C:\\Users\\pbálint\\Documents\\GitHub\\SchoolStuff\\C#\\Feladatok\\Haromszogek\\haromszogekCLI\\haromszogekCLI.csproj",
       "projectName": "haromszogekCLI",
-      "projectPath": "C:\\Users\\pbálint\\Documents\\GitHub\\SchoolStuff\\C#\\BackEnd\\Haromszogek\\haromszogekCLI\\haromszogekCLI.csproj",
+      "projectPath": "C:\\Users\\pbálint\\Documents\\GitHub\\SchoolStuff\\C#\\Feladatok\\Haromszogek\\haromszogekCLI\\haromszogekCLI.csproj",
       "packagesPath": "C:\\Users\\pbálint\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pbálint\\Documents\\GitHub\\SchoolStuff\\C#\\BackEnd\\Haromszogek\\haromszogekCLI\\obj\\",
+      "outputPath": "C:\\Users\\pbálint\\Documents\\GitHub\\SchoolStuff\\C#\\Feladatok\\Haromszogek\\haromszogekCLI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
